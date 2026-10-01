@@ -4,28 +4,44 @@ import type { Product } from "@/data/products";
 export default function ProductCard({ product, index }: { product: Product; index: number }) {
   const message = encodeURIComponent(`Hola VV Signature, me interesa ${product.name}. ¿Me cuentan disponibilidad de colores y aromas?`);
   return (
-    <article className={`product-card ${index % 2 ? "reverse" : ""}`}>
-      <div className="product-image-wrap">
-        <Image src={product.image} alt={product.name} fill sizes="(max-width: 850px) 100vw, 48vw" className="product-image" />
+    <article className={`product-card ${index === 0 ? "featured" : ""} ${product.hoverImage ? "has-hover" : ""}`}>
+      <div className="product-media">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          sizes={index === 0 ? "(max-width: 900px) 100vw, 40vw" : "(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 33vw"}
+          className="product-image"
+          style={product.imagePosition ? { objectPosition: product.imagePosition } : undefined}
+        />
+        {product.hoverImage && (
+          <Image
+            src={product.hoverImage}
+            alt=""
+            fill
+            sizes="(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 33vw"
+            className="product-image product-image--hover"
+          />
+        )}
+        <span className="product-index">{String(index + 1).padStart(2, "0")}</span>
       </div>
-      <div className="product-content">
-        <p className="eyebrow">VV Signature</p>
-        <h3>{product.name}</h3>
+      <div className="product-body">
         <p className="product-subtitle">{product.subtitle}</p>
+        <h3>{product.name}</h3>
         <p className="product-description">{product.description}</p>
         {product.details && (
           <ul className="detail-list">
             {product.details.map((item) => <li key={item}>{item}</li>)}
           </ul>
         )}
-        <div className="includes">
-          <span>Incluye</span>
-          <p>{product.includes.join(" · ")}</p>
-        </div>
-        <p className="customize">Elige color y aroma según disponibilidad.</p>
+        <p className="includes">
+          <span>Incluye</span> {product.includes.join(" · ")}
+        </p>
         <div className="product-footer">
           <strong>{product.price}</strong>
-          <a href={`https://wa.me/573104604446?text=${message}`} target="_blank" rel="noreferrer">Quiero este</a>
+          <a href={`https://wa.me/573104604446?text=${message}`} target="_blank" rel="noreferrer" aria-label={`Pedir ${product.name} por WhatsApp`}>
+            Quiero este <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </article>
