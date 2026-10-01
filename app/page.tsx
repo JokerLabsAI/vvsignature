@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "@/components/Header";
 import Catalog from "@/components/Catalog";
+import Gallery from "@/components/Gallery";
 import { Leaf, Logo, Ornament, Star } from "@/components/Ornament";
 import { products } from "@/data/products";
 
@@ -135,6 +136,9 @@ export default function Home() {
           </div>
         </article>
       </section>
+
+      {/* ───────── Gallery ───────── */}
+      <Gallery />
 
       {/* ───────── Accessories ───────── */}
       <section id="accesorios" className="accessories section">

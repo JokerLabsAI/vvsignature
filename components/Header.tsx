@@ -34,6 +34,7 @@ export default function Header() {
           <a href="#nosotros">Nuestra esencia</a>
           <a href="#coleccion">Colección</a>
           <a href="#atelier">Atelier</a>
+          <a href="#galeria">Galería</a>
           <a href="#accesorios">Accesorios</a>
           <a href="#contacto">Contacto</a>
           <a className="nav-cta" href="https://wa.me/573104604446" target="_blank" rel="noreferrer">
