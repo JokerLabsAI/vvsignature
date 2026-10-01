@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header from "@/components/Header";
-import ProductCard from "@/components/ProductCard";
+import Catalog from "@/components/Catalog";
 import { Leaf, Logo, Ornament, Star } from "@/components/Ornament";
 import { products } from "@/data/products";
 
@@ -98,20 +98,11 @@ export default function Home() {
       <section id="coleccion" className="collection section">
         <header className="section-heading center">
           <p className="eyebrow">Colección Signature</p>
-          <h2>Flores que <em>iluminan</em></h2>
+          <h2>Luz que deja <em>huella</em></h2>
           <Ornament />
-          <p>Cada pieza se elabora artesanalmente y puede personalizarse en color y aroma según disponibilidad.</p>
+          <p>Bouquets florales, velas en vaso y velas de figura. Cada pieza se elabora artesanalmente y puede personalizarse en color y aroma según disponibilidad.</p>
         </header>
-        <div className="products">
-          {products.map((product, index) => <ProductCard key={product.name} product={product} index={index} />)}
-          <article className="custom-card">
-            <Leaf size={28} />
-            <p className="eyebrow">Hecho a tu medida</p>
-            <h3>¿Tienes una idea <em>en mente?</em></h3>
-            <p>Diseñamos piezas personalizadas en color, aroma y tamaño para bodas, aniversarios y eventos.</p>
-            <a href={`${WHATSAPP}?text=${encodeURIComponent("Hola VV Signature, quiero una pieza personalizada.")}`} target="_blank" rel="noreferrer" className="button button--gold">Crear la mía</a>
-          </article>
-        </div>
+        <Catalog />
       </section>
 
       {/* ───────── Atelier / lookbook ───────── */}
@@ -133,7 +124,7 @@ export default function Home() {
 
         <article className="spotlight">
           <div className="spotlight-media">
-            <Image src="/images/atelier/iced-coffee-close.jpg" alt="Vela artesanal Iced Coffee sobre base de mármol" fill sizes="(max-width: 900px) 100vw, 45vw" className="cover" />
+            <Image src="/images/atelier/iced-coffee-room.jpg" alt="Vela artesanal Iced Coffee sobre base de mármol" fill sizes="(max-width: 900px) 100vw, 45vw" className="cover" />
           </div>
           <div className="spotlight-copy">
             <p className="tag">Nuevo</p>

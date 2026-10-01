@@ -1096,7 +1096,7 @@ h2 em, h1 em {
   background: linear-gradient(135deg, var(--noir-3), var(--noir-2));
   border: 1px solid #d4af3740;
   border-radius: 24px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
   align-items: stretch;
   margin-top: clamp(64px, 8vw, 120px);
   display: grid;
@@ -1104,8 +1104,12 @@ h2 em, h1 em {
 }
 
 .spotlight-media {
-  min-height: 520px;
+  aspect-ratio: 4 / 5;
   position: relative;
+}
+
+.spotlight-media img {
+  object-position: center 78%;
 }
 
 .spotlight-copy {
@@ -1468,7 +1472,6 @@ h2 em, h1 em {
 
   .spotlight-media {
     aspect-ratio: 4 / 5;
-    min-height: 0;
   }
 
   .accessory-grid {
@@ -1602,9 +1605,84 @@ h2 em, h1 em {
   line-height: 1.75;
 }
 
+@media (min-width: 1101px) {
+  .custom-card {
+    grid-column: span var(--span, 1);
+  }
+}
+
 @media (max-width: 1100px) {
   .custom-card {
     grid-column: 1 / -1;
+  }
+}
+
+.catalog-filters {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 16px;
+  display: flex;
+}
+
+.catalog-filters button {
+  cursor: pointer;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font: 500 12px/1 var(--sans);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  background: none;
+  border-radius: 999px;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  transition: background-color .3s, color .3s, border-color .3s;
+  display: inline-flex;
+}
+
+.catalog-filters button span {
+  font-family: var(--serif);
+  letter-spacing: 0;
+  color: var(--taupe);
+  font-size: 14px;
+}
+
+.catalog-filters button:hover {
+  border-color: var(--gold-deep);
+}
+
+.catalog-filters button.is-active {
+  background: var(--noir);
+  border-color: var(--noir);
+  color: var(--cream);
+}
+
+.catalog-filters button.is-active span {
+  color: var(--gold-soft);
+}
+
+.catalog-note {
+  text-align: center;
+  font-family: var(--serif);
+  color: var(--taupe);
+  margin: 0 0 clamp(36px, 4vw, 56px);
+  font-size: 19px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .catalog-filters {
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 0 var(--gutter) 6px;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .catalog-filters button {
+    flex: none;
   }
 }
 

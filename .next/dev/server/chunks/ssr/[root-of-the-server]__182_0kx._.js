@@ -1300,10 +1300,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$ne
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$4_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.3.4_@types+node@22.20.1_react-dom@19.2.8_react@19.2.8__react@19.2.8/node_modules/next/image.js [app-rsc] (ecmascript)");
 ;
 ;
-function ProductCard({ product, index }) {
+function ProductCard({ product, index, featured = false }) {
     const message = encodeURIComponent(`Hola VV Signature, me interesa ${product.name}. ¿Me cuentan disponibilidad de colores y aromas?`);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$4_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
-        className: `product-card ${index === 0 ? "featured" : ""} ${product.hoverImage ? "has-hover" : ""}`,
+        className: `product-card ${featured ? "featured" : ""} ${product.hoverImage ? "has-hover" : ""}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$4_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "product-media",
@@ -1312,7 +1312,7 @@ function ProductCard({ product, index }) {
                         src: product.image,
                         alt: product.name,
                         fill: true,
-                        sizes: index === 0 ? "(max-width: 900px) 100vw, 40vw" : "(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 33vw",
+                        sizes: featured ? "(max-width: 900px) 100vw, 40vw" : "(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 33vw",
                         className: "product-image",
                         style: product.imagePosition ? {
                             objectPosition: product.imagePosition
@@ -1387,23 +1387,23 @@ function ProductCard({ product, index }) {
                         lineNumber: 33,
                         columnNumber: 11
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$4_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    product.includes && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$4_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "includes",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$4_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Incluye"
                             }, void 0, false, {
                                 fileName: "[project]/components/ProductCard.tsx",
-                                lineNumber: 38,
-                                columnNumber: 11
+                                lineNumber: 39,
+                                columnNumber: 13
                             }, this),
                             " ",
                             product.includes.join(" · ")
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProductCard.tsx",
-                        lineNumber: 37,
-                        columnNumber: 9
+                        lineNumber: 38,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$4_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "product-footer",
@@ -1412,7 +1412,7 @@ function ProductCard({ product, index }) {
                                 children: product.price
                             }, void 0, false, {
                                 fileName: "[project]/components/ProductCard.tsx",
-                                lineNumber: 41,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$3$2e$4_$40$types$2b$node$40$22$2e$20$2e$1_react$2d$dom$40$19$2e$2$2e$8_react$40$19$2e$2$2e$8_$5f$react$40$19$2e$2$2e$8$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1427,19 +1427,19 @@ function ProductCard({ product, index }) {
                                         children: "→"
                                     }, void 0, false, {
                                         fileName: "[project]/components/ProductCard.tsx",
-                                        lineNumber: 43,
+                                        lineNumber: 45,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/ProductCard.tsx",
-                                lineNumber: 42,
+                                lineNumber: 44,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ProductCard.tsx",
-                        lineNumber: 40,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1460,12 +1460,32 @@ function ProductCard({ product, index }) {
 "use strict";
 
 __turbopack_context__.s([
+    "categories",
+    ()=>categories,
     "products",
     ()=>products
 ]);
+const categories = [
+    {
+        id: "bouquet",
+        label: "Bouquets florales",
+        description: "Flores de cera moldeadas a mano en caja o canasta."
+    },
+    {
+        id: "vaso",
+        label: "Velas en vaso",
+        description: "Velas aromáticas de cera de soja para disfrutar en casa."
+    },
+    {
+        id: "figura",
+        label: "Velas de figura",
+        description: "Piezas escultóricas en cera para regalos con intención."
+    }
+];
 const products = [
     {
         name: "Signature Royale",
+        category: "bouquet",
         subtitle: "Nuestra pieza más imponente",
         description: "Una creación exclusiva para quienes buscan regalar algo verdaderamente especial. Un bouquet artesanal que combina elegancia, delicadeza y un toque de distinción.",
         image: "/images/atelier/royale-front.jpg",
@@ -1487,6 +1507,7 @@ const products = [
     },
     {
         name: "Majestic Signature",
+        category: "bouquet",
         subtitle: "Detalles que hablan sin palabras",
         description: "Una composición floral hecha completamente a mano para expresar cariño, admiración y amor. Cada flor se moldea artesanalmente para convertirse en una experiencia memorable.",
         image: "/images/atelier/majestic-front.jpg",
@@ -1508,10 +1529,11 @@ const products = [
     },
     {
         name: "Signature Petit",
+        category: "bouquet",
         subtitle: "Un pequeño detalle, un gran recuerdo",
         description: "Creación artesanal ideal para sorprender, celebrar una ocasión especial o regalar un gesto bonito que perdure más allá del momento.",
-        image: "/images/atelier/petit-a.jpg",
-        hoverImage: "/images/atelier/petit-b.jpg",
+        image: "/images/atelier/petit-front.jpg",
+        hoverImage: "/images/atelier/petit-angle.jpg",
         price: "$100.000 COP",
         details: [
             "500 g de cera aprox.",
@@ -1526,6 +1548,7 @@ const products = [
     },
     {
         name: "Signature Mini",
+        category: "bouquet",
         subtitle: "Delicado, sofisticado y lleno de significado",
         description: "Arreglo floral elaborado artesanalmente con velas en forma de flores y detalles cuidadosamente seleccionados.",
         image: "/images/atelier/mini-a.jpg",
@@ -1543,6 +1566,7 @@ const products = [
     },
     {
         name: "Signature Romance",
+        category: "bouquet",
         subtitle: "Una expresión de amor y distinción",
         description: "Arreglo artesanal de rosas en cera, creado para transformar cada detalle en una expresión de amor, elegancia y distinción.",
         image: "/images/page-07-img-1.jpeg",
@@ -1560,6 +1584,7 @@ const products = [
     },
     {
         name: "Signature Blossom",
+        category: "bouquet",
         subtitle: "Una canasta que florece en cera",
         description: "Delicado arreglo floral elaborado artesanalmente con velas en forma de flores, creado para convertir cada regalo en un recuerdo especial.",
         image: "/images/atelier/blossom-front.jpg",
@@ -1579,6 +1604,7 @@ const products = [
     },
     {
         name: "Vela Lumière",
+        category: "vaso",
         subtitle: "Luz, aroma y elegancia",
         description: "Vela 100% artesanal con aroma a hot chocolate, elaborada con 200 g de cera de soja.",
         image: "/images/page-09-img-1.jpeg",
@@ -1591,6 +1617,31 @@ const products = [
         includes: [
             "Tarjeta personalizada",
             "Botella con fósforos"
+        ]
+    },
+    {
+        name: "Iced Coffee",
+        category: "vaso",
+        subtitle: "Tu café favorito, en cera",
+        description: "Vela artesanal de doble mecha inspirada en un iced coffee: capas cremosas y detalles que parecen hielo, en un vaso de vidrio para disfrutar en casa.",
+        image: "/images/atelier/iced-coffee-close.jpg",
+        hoverImage: "/images/atelier/iced-coffee.jpg",
+        price: "Precio a consultar",
+        details: [
+            "Doble mecha",
+            "Vaso de vidrio"
+        ]
+    },
+    {
+        name: "Velas Dentales",
+        category: "figura",
+        subtitle: "Una sonrisa hecha vela",
+        description: "Velas escultóricas en forma de diente, elaboradas a mano en cera. Un detalle original para odontólogos, consultorios o para celebrar una nueva sonrisa.",
+        image: "/images/atelier/dental.jpg",
+        price: "Precio a consultar",
+        details: [
+            "Varios diseños",
+            "Hechas a mano"
         ]
     }
 ];
